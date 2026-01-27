@@ -1,129 +1,98 @@
-# python_repo_template
-a bare-bones Python repository template. This example repo includes all of the Topsakal Lab GitHub Repo requirements (plus a few extra things to make it pretty).
+# Serial Communication and Firmware Extraction
+This repo is about developing individual skills in the following topics:
+* Serial communication & hardware
+* Firmware & software comparison
+* Firmware extraction from some common devices
+* Machine learning, data processing, and signals
+* Machine learning & some applications towards security (ML outside of raw sensor data)
+* Wireless communication and modulation
 
-The project description should be at the top of the repo and offer a summary in 3-5 sentences of what the project is. If your project is a continuation, include that.
-
-For additional README.md formatting and markdown, refer to an official guide such as:
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-
+This will be done across three different projects.
 
 ## Table of Contents
-* [Implementation](#implementation)
-* [Requirements](#requirements)
-* [Organization](#organization)
-* [Installation](#installation)
-* [Running the Project](#running-the-project)
-* [Team Members](#team-members)
+* [Project 1: Interfacing with Serial](#project-1-interfacing-with-serial)
+* [Short Background](#short-background-1)
+* [Build of Materials](#build-of-materials-1)
+* [Media](#media-1)
+* [Experimental Process](#experimental-process-1)
+* [Results](#results-1)
+* [Discussion](#discussion-1)
+----------------------------------------------------
+* [Project 2: Programming Arduino with TTL Cable](#project-2-programming-arduino-with-ttl-cable)
+* [Short Background](#short-background-2)
+* [Build of Materials](#build-of-materials-2)
+* [Media](#media-2)
+* [Experimental Process](#experimental-process-2)
+* [Results](#results-2)
+* [Discussion](#discussion-2)
+----------------------------------------------------
+* [Project 3: Arduino as programmer/debug board with Arduino ISP](#project-3-arduino-as-programmerdebug-board-with-arduino-isp)
+* [Short Background](#short-background-3)
+* [Build of Materials](#build-of-materials-3)
+* [Media](#media-3)
+* [Experimental Process](#experimental-process-3)
+* [Results](#results-3)
+* [Discussion](#discussion-3)
+----------------------------------------------------
 * [Citations and References](#citations-and-references)
-* [Related Publications and Repositories](#related-publications-and-repositories)
 
 
-## Implementation
-If your project requires hardware, a specialized environment, or other lab equipment, note that here. 
+## Project 1: Interfacing with Serial
+This project's about serial interfacing with hardware serial, software serial, and a TTL cable using a basic Arduino Uno kit. We will setup and run a software serial script. 
 
-If another program needs to be installed to interface with your code, mention that here. A block diagram might be useful if you need to link multiple projects/programs/devices.
+### Short Background (1)
+Hardware Serial is a wired communication that can transmit and receive at the same time, work while the Arduino is performing other tasks (via UART-to-USB adapter chip), and handle fast baud rates [https://www.martyncurrey.com/arduino-serial-a-look-at-the-different-serial-libraries/#:~:text=Using%20AltSoftSerial%20Sketch-,Hardware%20Serial,serial%20monitor%20when%20using%20usb.].
 
+Software Serial uses serial communication on digital pins of a physical board and software to replicate functionality of hardware serial. Unlike Hardware Serial, multiple software serial ports are possible [https://docs.arduino.cc/learn/built-in-libraries/software-serial/]. It is slightly more unreliable at very slow or very fast speeds due to its problems with timing. 
 
-## Requirements
+TTL Cables are wires used for microcontrollers, embedded systems, or DIY electronics. They allow the computer to communicate with devices that use Transistor-Transistor Logic (TTL) signals that are digital and have specific voltages [https://www.romtronic.com/what-is-a-usb-to-ttl-serial-cable/]. A logic 0 is usually 0 V while a logic 1 can be 3.3 V or 5 V.
 
-It is HIGHLY recomended to set up a virtual environment for your project. Instructions on how to do that with VSCode are at: https://code.visualstudio.com/docs/python/environments 
+### Build of Materials (1)
+* Arduino Uno Board
+* USB-B Data Cable
+* TTL Cable
+* Laptop/Desktop with Arduino IDE
 
-Library requirements for locally run Python code are included in requirements.txt and can be 
-installed using 'pip install -r requirements.txt'
+### Media (1)
 
-This project has tested with Python 3.# (primary development).
+### Experimental Process (1)
 
-```python
-copy the list from requirements.txt here to show users what they're downloading/installing at a glance
-```
+### Results (1)
 
-Optionally, requirements can be installed manually with:
+### Discussion (1)
 
-```python
-pip install wxPython, matplotlib, pandas, numpy, ezdxf, Pint, pcb-tools, pcb-tools-extension
+----------------------------------------------------
+## Project 2: Programming Arduino with TTL Cable
+Introduction
 
-```
-This is an example for if you've had a difficult time with the requirements.txt file. Sometimes libraries are packaged together.
+### Short Background (2)
 
-## Organization
+### Build of Materials (2)
 
-The simplified project structure is shown below.  Full file structure will be updated in the documentation for future collaboration efforts. 
+### Media (2)
 
-```python
-.
-├── python_repo_template
-|
-├── .docs                               # directory for detailed project documentation.
-│   └── ...                             # documentation as PDFs.
-|
-├── .media                              # directory for project media.
-│   └── ...                             # imgs, gifs, icons, other small files.
-|
-├── .src                                # directory for source code of the project.
-│   │
-│   ├── ...                             # root of the project code.
-│   │
-│   └── main.py                         # main program file. The project entry point.
-|
-├── README.md                           # this README.
-├── .gitignore                          # the repository gitignore file.
-└── requirements.txt                    # project requirement minimum.
-```
+### Experimental Process (2)
 
+### Results (2)
 
+### Discussion (2)
 
-## Installation
+----------------------------------------------------
+## Project 3: Arduino as programmer/debug board with Arduino ISP
+Introduction
 
-If the project requires a specific setup, license, etc. briefly describe that here. 
+### Short Background (3)
 
-If the project needs other code to run, mention that in 'implementation'. This section should answer the question of "what do I do when I've downloaded the GitHub repo".
+### Build of Materials (3)
 
-If your code just runs in VSCode, then mention that.
+### Media (3)
 
-Python projects will always require some setup. It is highly suggested that extensions, plug-ins, comd compiler versions be listed so that others can replicated the process.
+### Experimental Process (3)
 
-The following were installed for this example:
-* VSCode:
-  * Python language extension
+### Results (3)
 
-* Local computer:
-  * Python language compiler (https://www.python.org/downloads/)
+### Discussion (3)
 
-
-
-## Running the Project
-
-This project should be run from main.py, either in an IDE or with 'python main.py'. 
-
-While there are unit testing artifacts in some code files, entry at other points in the program will cause some features to not work. 
-
-It is recommended to run this project in a virtual environment, but it is not a requirement. 
-
-
-
-## Team Members
-
-Projects will often have many contributors, sometimes over a number of years. 
-If you work on a project, add your name, a contact email, what your roll on the project was, and when you worked on it.
-
-Do not delete old team members. (but you can delete the placeholders below)
-
-
-|       Name                  |   Best Contact Email          |                 Who Am I?             |     Year on the Project       |
-| --------------------------- | ----------------------------- | ------------------------------------- | ----------------------------- |
-| Michael Suche               | suchemj@vcu.edu               | Wireless Communications Lab Manager   | 2023 - present                |
-| Sarah Johnson               | johnsonse28@vcu.edu           | Ph.D Student                          | 2024 - present                |
-| Amber Nunnally              | nunnallyag@vcu.edu            | Ph.D Student                          | 2025 - present                |        
-| Lauren Linkous              | linkouslc@vcu.edu             | Post Doc & MDS Testbed Manager        | 2022 - 2024                   |
-
-
-
-
+----------------------------------------------------
 ## Citations and References
-Use IEEE format for all citations and references. Include links when possible.
-These include tutorials, websites, journals, and other material used to create or continue this project. 
-
-
-## Related Publications and Repositories
-
-If this project has its own publications or other supporting repositories. Link those here. Use IEEE format for publications.
+[1] Test
