@@ -56,7 +56,7 @@ TTL Cables are wires used for microcontrollers, embedded systems, or DIY electro
 ### Media (1)
 
 ![alt text](/media/SerialMonitorTest_ArduinoUno/SerialMonitorConnection.jpg)
-This figure showcases the USB-B connection to the Arduino Uno board. It also showcases the SoftwareSerial connection using a TTL cable as shown in the TTL Cable Specs sheet below. The connection goes Black-Red for GND, White-Red in Digital Pin 2 for RX, and Green-Orange in Digital Pin 3 for TX. This is based on the code given in [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino).
+This figure showcases the USB-B connection to the Arduino Uno board. It also showcases the SoftwareSerial connection using a TTL cable as shown in the TTL Cable Specs sheet below. The connection goes Black-Red for GND, White-Red in Digital Pin 3 for TX, and Green-Orange in Digital Pin 2 for RX. This is based on the code given in [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino).
 
 ### Experimental Process (1)
 1. Connect USB-B wire to Arduino Uno and Computer Port
@@ -75,11 +75,11 @@ This showcases a successful data upload onto the Arduino via USB-B.
 
 ### Discussion (1)
 
-Despite opening a new sketch window and selecting the relevant COM port for Serial Monitor, Arduino IDE 2.3.7 does not support dual Serial Monitoring.
+Despite opening a new sketch window and selecting the relevant COM port for Serial Monitor, Arduino IDE 2.3.7 does not support dual Serial Monitoring. This is explored and fixed in Part 2 with [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py).
 
 ----------------------------------------------------
 ## Project 2: Programming Arduino with TTL Cable
-This section involves programming an Arduino with a TTL cable.
+This section involves programming an Arduino with a TTL cable and reading out with Python.
 
 ### Short Background (2)
 Firmware is code that's embedded within a hardware device to help it function. It is also known as "software for hardware." Firmware delivers instructions for how the hardware device should start, interact with other devices, and execute I/O tasks.
@@ -132,9 +132,11 @@ Note: Steps 6-8 does not have to be done in order. The Arduino IDE used to uploa
 
 ### Results (2)
 
-The TTL cable has a failed serial communication detection as in part 1. However, the .py codes work in reading out data from the Arduino via the USB-B cable.
+The TTL cable works as expected by communicating both COM3 (USB-B for Arduino) and COM4 (TTL Cable). It showcases how the two COMs can communicate serial data from one Arduino microcontroller with Python through VSCode.
 
 ### Discussion (2)
+
+Flipping the TX and RX cable did not work the first time, but it worked the second time. Nonetheless, this Part 2 showcases how some shortcomings of original microcontroller firmware can be adjusted within Python.
 
 ----------------------------------------------------
 ## Project 3: Arduino as programmer/debug board with Arduino ISP
