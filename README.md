@@ -106,6 +106,18 @@ Boot Loader is a piece of firmware that allows a piece of software to be uploade
 
 ### Media (2)
 
+This figure shows the output read from [readCOM.py](/src/SerialMonitorTest_ArduinoUno/readCOM.py) when connected to COM3.
+
+![alt text](/media/SerialMonitorTest_ArduinoUno/readCOM_output.PNG)
+
+This figure shows the output read from [loopCOM.py](/src/SerialMonitorTest_ArduinoUno/loopCOM.py).
+
+![alt text](/media/SerialMonitorTest_ArduinoUno/loopCOM_output.PNG)
+
+This figure shows the output read from [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py).
+
+![alt text](/media/SerialMonitorTest_ArduinoUno/twoCOM_output.PNG)
+
 ### Experimental Process (2)
 1. Connect USB-B wire to Arduino Uno and Computer Port
 2. Connect TTL cable using jumper cables into Arduino Ports and ground.
@@ -119,6 +131,8 @@ Boot Loader is a piece of firmware that allows a piece of software to be uploade
 Note: Steps 6-8 does not have to be done in order. The Arduino IDE used to upload the [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino) should be closed in order to run these .py codes. 
 
 ### Results (2)
+
+The TTL cable has a failed serial communication detection as in part 1. However, the .py codes work in reading out data from the Arduino via the USB-B cable.
 
 ### Discussion (2)
 
