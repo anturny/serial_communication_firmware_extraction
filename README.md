@@ -7,7 +7,7 @@ This repo is about developing individual skills in the following topics:
 * Machine learning & some applications towards security (ML outside of raw sensor data)
 * Wireless communication and modulation
 
-This will be done across three different projects.
+This will be done across three different projects. The repository is made by Anthony Nguyen.
 
 ## Table of Contents
 * [Project 1: Interfacing with Serial](#project-1-interfacing-with-serial)
@@ -55,11 +55,27 @@ TTL Cables are wires used for microcontrollers, embedded systems, or DIY electro
 
 ### Media (1)
 
+![alt text](/media/SerialMonitorTest_ArduinoUno/SerialMonitorConnection.jpg)
+This figure showcases the USB-B connection to the Arduino Uno board. It also showcases the SoftwareSerial connection using a TTL cable as shown in the TTL Cable Specs sheet below. The connection goes Black-Red for GND, White-Red in Digital Pin 2 for RX, and Green-Orange in Digital Pin 3 for TX. This is based on the code given in [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino).
+
 ### Experimental Process (1)
+1. Connect USB-B wire to Arduino Uno and Computer Port
+2. Connect TTL cable using jumper cables into Arduino Ports and ground.
+3. Upload [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino) into the Arduino with COM3 selected in Arduino IDE under Tools -> Port.
+4. When the code is done uploading, hit the white or blue button on the Arduino Board within a second.
+5. Look at Serial Monitor and select 9600 Baud rate if not already selected.
 
 ### Results (1)
 
+The result of the serial upload should be seen like below.
+
+![alt text](/media/SerialMonitorTest_ArduinoUno/SerialMonitorTestOutput1.PNG)
+
+This showcases a successful data upload onto the Arduino via USB-B.
+
 ### Discussion (1)
+
+Despite opening a new sketch window and selecting the relevant COM port for Serial Monitor, Arduino IDE 2.3.7 does not support dual Serial Monitoring.
 
 ----------------------------------------------------
 ## Project 2: Programming Arduino with TTL Cable
