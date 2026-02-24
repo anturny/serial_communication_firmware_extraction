@@ -56,7 +56,7 @@ TTL Cables are wires used for microcontrollers, embedded systems, or DIY electro
 ### Media (1)
 
 ![alt text](/media/SerialMonitorTest_ArduinoUno/SerialMonitorConnection.jpg)
-This figure showcases the USB-B connection to the Arduino Uno board. It also showcases the SoftwareSerial connection using a TTL cable as shown in the TTL Cable Specs sheet below. The connection goes Black-Red for GND, White-Red in Digital Pin 3 for TX, and Green-Orange in Digital Pin 2 for RX. This is based on the code given in [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino).
+This figure showcases the USB-B connection to the Arduino Uno board. It also showcases the SoftwareSerial connection using a TTL cable as shown in the TTL Cable Specs sheet below. The connection goes Black-Red for GND, White-Red in Digital Pin 3 for TX, and Green-Orange in Digital Pin 2 for RX. It should be duly noted that these connections are FLIPPED after uploading the sketch but before reading the output files. This is based on the code given in [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino).
 
 ### Experimental Process (1)
 1. Connect USB-B wire to Arduino Uno and Computer Port
@@ -75,7 +75,7 @@ This showcases a successful data upload onto the Arduino via USB-B.
 
 ### Discussion (1)
 
-Despite opening a new sketch window and selecting the relevant COM port for Serial Monitor, Arduino IDE 2.3.7 does not support dual Serial Monitoring. This is explored and fixed in Part 2 with [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py).
+The big error here comes from not flipping the TX and RX wires between uploading the initial sketch and running the .py codes. This must happen for Arduino IDE 2.3.7 to support dual Serial Monitoring. This is explored and fixed in Part 2 with [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py).
 
 ----------------------------------------------------
 ## Project 2: Programming Arduino with TTL Cable
@@ -124,11 +124,12 @@ This figure shows the output read from [twoCOM.py](/src/SerialMonitorTest_Arduin
 3. Upload [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino) into the Arduino with COM3 selected in Arduino IDE under Tools -> Port.
 4. When the code is done uploading, hit the white or blue button on the Arduino Board within a second.
 5. Look at Serial Monitor and select 9600 Baud rate if not already selected.
-6. Run [readCOM.py](/src/SerialMonitorTest_ArduinoUno/readCOM.py) in a Python Terminal to inspect.
-7. Run [loopCOM.py](/src/SerialMonitorTest_ArduinoUno/loopCOM.py) in a Python Terminal to inspect.
-8. Run [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py) in a Python Terminal to inspect.
+6. Flip the TX and RX wires.
+7. Run [readCOM.py](/src/SerialMonitorTest_ArduinoUno/readCOM.py) in a Python Terminal to inspect.
+8. Run [loopCOM.py](/src/SerialMonitorTest_ArduinoUno/loopCOM.py) in a Python Terminal to inspect.
+9. Run [twoCOM.py](/src/SerialMonitorTest_ArduinoUno/twoCOM.py) in a Python Terminal to inspect.
 
-Note: Steps 6-8 does not have to be done in order. The Arduino IDE used to upload the [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino) should be closed in order to run these .py codes. 
+Note: Steps 7-9 does not have to be done in order. The Arduino IDE used to upload the [serialMonitorTest.ino](/src/SerialMonitorTest_ArduinoUno/serialMonitorTest.ino) should be closed in order to run these .py codes. 
 
 ### Results (2)
 
